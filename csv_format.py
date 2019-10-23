@@ -1,7 +1,7 @@
 import re
 import json
 
-f = open('student_csv.csv', 'w+')
+f = open('ips.csv', 'w+')
 f.truncate(0)
 
 first_line = 'NetID,ip_address\n'
