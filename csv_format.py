@@ -1,8 +1,6 @@
 import re
 import json
 
-csv_format = []
-
 f = open('student_csv.csv', 'w+')
 f.truncate(0)
 
