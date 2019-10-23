@@ -27,8 +27,7 @@ with open('ips.csv') as csvfile:
                 ip_addr = row['IP_addr']
                 file_write.write("#Http Server\nserver{\n\tlisten 80;\n\tserver_name " + netID + ".it210.it.et.byu.edu;\n\tlocation / {\n\t\tproxy_pass http://" + ip_addr + ";\n\t\tinclude include.d/nocacheproxy.conf;\n\t}\n}\n")
                 file_write.write("#NodeJS Server\nserver{\n\tlisten 80;\n\tserver_name nodejs." + netID + ".it210.it.et.byu.edu;\n\tlocation / {\n\t\tproxy_pass http://" + ip_addr + ":1337;\n\t\tinclude include.d/nocacheproxy.conf;\n\t}\n}\n\n")
-                #This will print out the name of the student to make sure they were added
-                print(name + " added successfully!")
+                
                 line_count += 1
 #This statement lets you know how many students were added successfuly.
 print ('{} students have reverse proxy servers'.format(line_count))
