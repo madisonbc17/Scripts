@@ -24,7 +24,7 @@ with open('student.json') as jsondata:
             new_line = student_id[0] + ',' + student_ip[0] + '\n'
 
         else:
-            new_line = "N/A,N/A"
+            print("Couldn't determine student id or ip")
         f.write(new_line)
 
 f.close()
